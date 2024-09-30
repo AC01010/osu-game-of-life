@@ -87,10 +87,10 @@ with open("hitobjects.txt", "w") as f:
     for i in range(500):
         print("Generation:", i)
         if i in instructions:
-            for x, y in instructions[i][0]:
-                conway.place(x, y)
             if instructions[i][1]:
                 conway.clear()
+            for x, y in instructions[i][0]:
+                conway.place(x, y)
         # print(conway)
         x = conway.osu_field()
         for circle in render(x):
